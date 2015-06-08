@@ -8,10 +8,10 @@
  * Controller of the todoAppHybridApp
  */
 angular.module('todoAppHybridApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope, MainFactory, localStorageService) {
+
+    function _init() {
+      MainFactory.getFoods();
+    }
+    _init();
   });
