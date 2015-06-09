@@ -29,6 +29,8 @@ angular.module('todoAppHybridApp')
 
     $scope.showFood = function (item) {
       $scope.food = angular.copy(item);
+      $scope.food.quantity = 1;
+      $scope.food.subTotal = angular.copy(parseFloat(item.price));
       $scope.modalFood.show();
     }
 

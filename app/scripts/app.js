@@ -68,6 +68,16 @@ angular
           }
         }
       })
+      .state('main.order', {
+        url: '/order',
+        views: {
+          'menuContent' :{
+            templateUrl: 'views/states/order.html',
+            controller: 'OrderCtrl',
+            data : {requireLogin : true }
+          }
+        }
+      })
       .state('main.foods', {
         url: '/foods',
         views: {
